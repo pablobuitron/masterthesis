@@ -7,5 +7,5 @@ To provide comprehensive information about my investigation, I have created a Wi
 ## [Projects](https://github.com/pablobuitron/mastertesis/projects)
 The Projects section of this repository showcases the workflows created to address any issues that arise during the course of this project. By documenting and tracking these workflows, I ensure that any challenges encountered are resolved efficiently, contributing to the overall progress of the thesis.
 
-Feel free to explore the various sections of this repository and stay updated with my ongoing work. If you have any questions, feedback, or suggestions, please don't hesitate to reach out. Thank you for your interest in my master's thesis!
+Feel free to explore the various sections of this repository and stay updated with my ongoing work. If you have any questions, feedback, or suggestions, please don't hesitate to reach out at [pbuitron@estud.usfq.edu.ec](pbuitron@estud.usfq.edu.ec). Thank you for your interest in my master's thesis!
 
