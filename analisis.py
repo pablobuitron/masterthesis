@@ -1,5 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import random
+
+# Generar valores aleatorios para n y m
+n = random.randint(0, 100)
+m = random.randint(0, 100)
 
 # Cargar los datos desde el archivo con separación por espacios
 data = pd.read_csv("fluxquito3min0deg.csv", delimiter="\s+")
@@ -11,8 +16,9 @@ plt.ylabel("y")
 plt.title("Distancia al detector")
 
 # Obtener el nombre del archivo sin la extensión
-nombre_archivo = "fluxquito3min0deg"
-# Guardar el gráfico en una imagen PNG con el mismo nombre que el dataset
+nombre_archivo = f"{n}sec{m}deg"
+
+# Guardar el gráfico en una imagen PNG con el nuevo nombre
 plt.savefig(nombre_archivo + ".png")
 
 # Hacer la preselección de datos según CorsikaId y prm_theta
@@ -26,4 +32,3 @@ for corsika_id, tabla in tablas_por_corsika_id:
     print(f"Tabla para CorsikaId {corsika_id}:")
     print(tabla)
     print("\n")
-
