@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import random
 
 # Generar valores aleatorios para n y m
-n = random.randint(0, 100)
-m = random.randint(0, 100)
+n = 60
+m = 40
 
 # Cargar los datos desde el archivo con separación por espacios
-data = pd.read_csv("fluxquito3min0deg.csv", delimiter="\s+")
+data = pd.read_csv("prueba_000060.csv", delimiter="\s+")
 
 # Realizar un plot de dispersión entre las columnas "x" y "y"
 plt.scatter(data["x"], data["y"])
@@ -22,7 +22,7 @@ nombre_archivo = f"{n}sec{m}deg"
 plt.savefig(nombre_archivo + ".png")
 
 # Hacer la preselección de datos según CorsikaId y prm_theta
-preseleccion = data[data["prm_theta"] >= 70]
+preseleccion = data[data["prm_theta"] >= 40]
 
 # Crear tablas distintas según CorsikaId
 tablas_por_corsika_id = preseleccion.groupby("CorsikaId")
