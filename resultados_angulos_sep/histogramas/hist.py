@@ -4,10 +4,10 @@ import random
 import numpy as np
 # Generar valores aleatorios para n y m
 n = 60
-m = 70
+m = 90
 
 # Cargar los datos desde el archivo con separación por espacios
-data = pd.read_csv("merged0-70-90.csv", delimiter="\s+")
+data = pd.read_csv("60sec90deg_000060.csv", delimiter="\s+")
 
 # Función para convertir el formato específico de "z" a valores numéricos
 #def convertir_z(valor):
@@ -53,14 +53,14 @@ plt.tight_layout()
 nombre_archivo = f"{n}sec{m}deg"
 
 # Guardar la figura en una imagen PNG con el nuevo nombre
-plt.savefig("merged" + "_histogramas.png")
+plt.savefig(nombre_archivo + "_histogramas.png")
 
 # Crear tablas distintas según CorsikaId
 tablas_por_corsika_id = data.groupby("CorsikaId")
 
 # Guardar las tablas resultantes en archivos de texto separados
 for corsika_id, tabla in tablas_por_corsika_id:
-    nombre_archivo_tabla = f"tabla_CorsikaId_{corsika_id}.txt"
+    nombre_archivo_tabla = f"tabla_CorsikaId_{corsika_id}_90deg.txt"
     with open(nombre_archivo_tabla, "w") as file:
         file.write(f"Tabla para CorsikaId {corsika_id}:\n")
         file.write(tabla.to_string())
