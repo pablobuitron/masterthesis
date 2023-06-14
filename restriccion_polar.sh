@@ -1,17 +1,27 @@
 #!/bin/bash
 
-# Obtener la ubicación del directorio desde la bandera -d o --directorio
-while [[ "$#" -gt 0 ]]; do
-    case $1 in
-        -d|--directorio) directorio="$2"; shift ;;
-        *) echo "Opción inválida: $1"; exit 1 ;;
+# Obtener las opciones de las banderas usando getopts
+while getopts "d:m:n:" opcion; do
+    case $opcion in
+        d)
+            directorio=$OPTARG
+            ;;
+        m)
+            numero_linea_14=$OPTARG
+            ;;
+        n)
+            numero_linea_15=$OPTARG
+            ;;
+        \?)
+            echo "Opción inválida: -$OPTARG" >&2
+            exit 1
+            ;;
     esac
-    shift
 done
 
 # Verificar si se proporcionó la ubicación del directorio
 if [ -z "$directorio" ]; then
-    echo "Debes proporcionar la ubicación del directorio con la opción -d/--directorio."
+    echo "Debes proporcionar la ubicación del directorio con la opción -d."
     exit 1
 fi
 
@@ -25,9 +35,9 @@ fi
 for archivo in "$directorio"/*.run; do
     # Verificar si el archivo es legible
     if [[ -r "$archivo" ]]; then
-        # Modificar las líneas 14 y 15 del archivo
-        sed -i '14s/.*/-90/' "$archivo"
-        sed -i '15s/.*/90/' "$archivo"
+        # Modificar las líneas 14 y 15 del archivo con los números de reemplazo proporcionados
+        sed -i "14s/.*/$numero_linea_14/" "$archivo"
+        sed -i "15s/.*/$numero_linea_15/" "$archivo"
         echo "Archivo modificado: $archivo"
     fi
 done
