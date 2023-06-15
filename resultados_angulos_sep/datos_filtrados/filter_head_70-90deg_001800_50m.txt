@@ -1,0 +1,14 @@
+Tabla para CorsikaId 1:
+     CorsikaId        px        py        pz        x        y       z  shower_id  prm_id  prm_energy  prm_theta  prm_phi
+255          1  0.014721 -0.000605  0.002852 -44.5598  19.0847  2200.0         13     703     6805.77     79.446    -0.65
+256          1  0.119973 -0.004491  0.022824 -40.8280  19.6926  2200.0         13     703     6805.77     79.446    -0.65
+258          1  0.020531 -0.001736  0.003206 -33.2789  24.3196  2200.0         13     703     6805.77     79.446    -0.65
+
+Tabla para CorsikaId 3:
+     CorsikaId        px        py        pz        x        y       z  shower_id  prm_id  prm_energy  prm_theta  prm_phi
+259          3  0.048594 -0.000343  0.008135 -32.9956  24.7841  2200.0         13     703     6805.77     79.446    -0.65
+
+Tabla para CorsikaId 5:
+     CorsikaId       px        py       pz        x        y       z  shower_id  prm_id  prm_energy  prm_theta  prm_phi
+254          5  59.3254 -0.689718  11.0593 -34.4439  25.9176  2200.0         13     703     6805.77     79.446    -0.65
+
