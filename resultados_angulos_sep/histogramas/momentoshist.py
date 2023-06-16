@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Cargar los datos desde el archivo con separación por espacios
-data = pd.read_csv("0-70deg_001800.csv", delimiter="\s+")
+data = pd.read_csv("70-90deg_086400_50m.txt", delimiter="\s+")
 
 # Crear una figura con tres subplots para los histogramas
 fig, axs = plt.subplots(3, 1, figsize=(8, 10))
@@ -32,7 +32,7 @@ axs[2].set_yscale("log")  # Utilizar escala logarítmica para el eje y
 plt.tight_layout()
 
 # Obtener el nombre del archivo sin la extensión
-nombre_archivo = "histogramas_px_py_pz_region_0-70"
+nombre_archivo = "histogramas_px_py_pz_region_0-70_50m"
 
 # Guardar la figura en una imagen PNG con el nuevo nombre
 plt.savefig(nombre_archivo + ".png")
