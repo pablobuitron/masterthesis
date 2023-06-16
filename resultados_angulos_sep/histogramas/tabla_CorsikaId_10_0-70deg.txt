@@ -1,0 +1,4 @@
+Tabla para CorsikaId 10:
+       CorsikaId        px        py       pz       x        y        z  shower_id  prm_id  prm_energy  prm_theta  prm_phi
+63904         10 -0.736486 -0.950502  1.50295 -188.62 -771.893  2199.95       4224    1608     1304.29     44.096  -92.523
+
