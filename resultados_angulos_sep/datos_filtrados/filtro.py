@@ -10,7 +10,7 @@ m = 90
 data = pd.read_csv("70-90deg_086400.csv", delimiter="\s+")
 
 # Filtrar los datos con "x" y "y" menores o iguales a 1000
-filtered_data = data[(data["x"].abs() <= 50) & (data["y"].abs() <= 50)]
+filtered_data = data[(data["x"].abs() <= 100) & (data["y"].abs() <= 100)]
 
 # Realizar un plot de dispersión entre las columnas "x" y "y"
 plt.scatter(filtered_data["x"], filtered_data["y"])
@@ -23,17 +23,7 @@ nombre_archivo = f"{n}-{m}deg_086400"
 
 # Guardar el gráfico en una imagen PNG con el nuevo nombre
 #plt.savefig(nombre_archivo + ".png")
-plt.savefig("filter-" + nombre_archivo + "_50m.png")
+plt.savefig("filter-" + nombre_archivo + "_100m.png")
 
-# Hacer la preselección de datos según CorsikaId y prm_theta
-preseleccion = filtered_data[filtered_data["prm_theta"] >= 0]
-
-# Crear tablas distintas según CorsikaId
-tablas_por_corsika_id = preseleccion.groupby("CorsikaId")
-
-# Guardar las tablas resultantes1 en un archivo de texto
-with open("filter_head_70-90deg_086400_50m.txt", "w") as file:
-    for corsika_id, tabla in tablas_por_corsika_id:
-        file.write(f"Tabla para CorsikaId {corsika_id}:\n")
-        file.write(tabla.to_string())
-        file.write("\n\n")
+# Guardar los datos filtrados en un archivo de texto
+filtered_data.to_csv("filter_" + nombre_archivo + ".txt", sep=" ", index=False)
