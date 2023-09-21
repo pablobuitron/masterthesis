@@ -16,16 +16,16 @@ axs[0].set_title("Histograma de z")
 axs[0].set_yscale("log")  # Utilizar escala logarítmica para el eje y
 
 # Calcular las barras de error
-errors_z = np.sqrt(counts_z)
+#errors_z = np.sqrt(counts_z)
 
 # Mostrar las barras de error
-axs[0].errorbar(
-    x=(bins_z[:-1] + bins_z[1:]) / 2,
-    y=counts_z,
-    yerr=errors_z,
-    fmt='none',
-    color='black'
-)
+#axs[0].errorbar(
+#    x=(bins_z[:-1] + bins_z[1:]) / 2,
+#    y=counts_z,
+#    yerr=errors_z,
+#    fmt='none',
+#    color='black'
+#)
 
 #Letras Griegas
 phi = "\u03C6"

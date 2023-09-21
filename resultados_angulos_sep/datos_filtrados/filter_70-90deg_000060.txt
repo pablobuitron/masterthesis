@@ -1,0 +1,2 @@
+CorsikaId px py pz x y z shower_id prm_id prm_energy prm_theta prm_phi
+1 0.00122516 0.000120129 0.000954499 36.1216 -54.4619 2200.0 176 402 1542.18 77.295 -2.058

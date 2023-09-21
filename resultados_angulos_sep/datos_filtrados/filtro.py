@@ -7,7 +7,7 @@ n = 70
 m = 90
 
 # Cargar los datos desde el archivo con separación por espacios
-data = pd.read_csv("70-90deg_086400.csv", delimiter="\s+")
+data = pd.read_csv("70-90deg_000060.csv", delimiter="\s+")
 
 # Filtrar los datos con "x" y "y" menores o iguales a 1000
 filtered_data = data[(data["x"].abs() <= 100) & (data["y"].abs() <= 100)]
@@ -19,7 +19,7 @@ plt.ylabel("y")
 plt.title("Distancia al detector, ángulos entre 70° a 90°")
 
 # Obtener el nombre del archivo sin la extensión
-nombre_archivo = f"{n}-{m}deg_086400"
+nombre_archivo = f"{n}-{m}deg_000060"
 
 # Guardar el gráfico en una imagen PNG con el nuevo nombre
 #plt.savefig(nombre_archivo + ".png")
